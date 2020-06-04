@@ -22,9 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 		.csrf().disable()
-		// make sure we use stateless session; session won't be used to store user's state.
-		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) 	
-		.and()
+ 	
 		// handle an authorized attempts 
 		.exceptionHandling().authenticationEntryPoint((req, rsp, e) -> rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED)) 	
 		.and()
@@ -35,9 +33,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		// allow all who are accessing "auth" service
 		.antMatchers(HttpMethod.POST, jwtConfig.getUri()).permitAll()  
 		// must be an admin if trying to access admin area (authentication is also required here)
-		.antMatchers("/gallery" + "/admin/**").hasRole("ADMIN")
+		.antMatchers("/admin/**").hasRole("ADMIN")
+		.antMatchers("/user/**").hasRole("USER")
 		// Any other request must be authenticated
-		.anyRequest().authenticated(); 
+		.anyRequest().authenticated()
+		.and()
+		// make sure we use stateless session; session won't be used to store user's state.
+		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS); 
 
 	}
 
