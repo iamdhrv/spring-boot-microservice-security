@@ -45,6 +45,6 @@ Header Response :
 
 ## Contribute
 
-Covid-19 India Tracker is an open source project. So, feel free to contribute. And if you're new to contributing to Open Source on Github, then [this guide](https://guides.github.com/activities/contributing-to-open-source/) will help you.
+Spring Boot Microservice Security is an open source project. So, feel free to contribute. And if you're new to contributing to Open Source on Github, then [this guide](https://guides.github.com/activities/contributing-to-open-source/) will help you.
 
 If you find any error or have any suggestion, feel free to create an [issue](https://github.com/iamdhrv/spring-boot-microservice-security/issues/new).
