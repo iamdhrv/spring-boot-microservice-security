@@ -6,7 +6,7 @@ To Run each microservices follow below step for each microservice.
 ## Project Setup
 
 ```
-npm install
+mvn clean install
 ```
 
 ## Run Locally
