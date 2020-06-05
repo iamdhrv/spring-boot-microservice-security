@@ -23,7 +23,7 @@ HTTP Method : POST
 Json Request (admin) :
 ```json
 {
-	"username":"admin"
+	"username":"admin",
 	"password":"12345"
 }
 
@@ -31,7 +31,7 @@ Json Request (admin) :
 Json Request (user) :
 ```json
 {
-	"username":"hk"
+	"username":"hk",
 	"password":"12345"
 }
 ```
